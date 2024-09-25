@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <title>Shipment Tracking</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="this website is about logistics"> 
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<style>
+    body{background-color: #eeeeee;font-family: 'Open Sans',serif}.container{margin-top:50px;margin-bottom: 50px}.card{position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 0.10rem}.card-header:first-child{border-radius: calc(0.37rem - 1px) calc(0.37rem - 1px) 0 0}.card-header{padding: 0.75rem 1.25rem;margin-bottom: 0;background-color: #fff;border-bottom: 1px solid rgba(0, 0, 0, 0.1)}.track{position: relative;background-color: #ddd;height: 7px;display: -webkit-box;display: -ms-flexbox;display: flex;margin-bottom: 60px;margin-top: 50px}.track .step{-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;width: 25%;margin-top: -18px;text-align: center;position: relative}.track .step.active:before{background: #FF5722}.track .step::before{height: 7px;position: absolute;content: "";width: 100%;left: 0;top: 18px}.track .step.active .icon{background: #ee5435;color: #fff}.track .icon{display: inline-block;width: 40px;height: 40px;line-height: 40px;position: relative;border-radius: 100%;background: #ddd}.track .step.active .text{font-weight: 400;color: #000}.track .text{display: block;margin-top: 7px}.itemside{position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;width: 100%}.itemside .aside{position: relative;-ms-flex-negative: 0;flex-shrink: 0}.img-sm{width: 80px;height: 80px;padding: 7px}ul.row, ul.row-sm{list-style: none;padding: 0}.itemside .info{padding-left: 15px;padding-right: 7px}.itemside .title{display: block;margin-bottom: 5px;color: #212529}p{margin-top: 0;margin-bottom: 1rem}.btn-warning{color: #ffffff;background-color: #ee5435;border-color: #ee5435;border-radius: 1px}.btn-warning:hover{color: #ffffff;background-color: #ff2b00;border-color: #ff2b00;border-radius: 1px}
+ 
+</style>
+</head>
+<body>
+<!-- Homepage -->
+  <div data-role="page" id="page1">
+	   <div data-role="header">`
+	        <h1>Enter Cargo Number</h1>
+	   </div>
+	   <div data-role="main" class="ui-content">
+	       
+           <ul data-role="listview" data-filter="true" data-filter-placeholder="Enter Your Tracking Number" data-filter-reveal="true">
+		       <li><a href="#page2" data-transition="pop">D14E126Q</a></li>
+
+		   
+		   </ul>		   
+
+	   </div>
+
+	   
+	   <div data-role="footer" data-position="fixed">
+	       <h4>Zeel Logistics</h4>`
+	   </div>
+  </div>
+  
+ <!-- D14E126Q page -->
+  <div data-role="page" id="page2">
+	   <div data-role="header">`
+	        <h1> Cargo #D14E126Q</h1>
+	   </div>
+	   <div data-role="main" class="ui-content">
+	                <article class="card">
+            <header class="card-header"> My Orders / Tracking </header>
+            <div class="card-body">
+                <h6>Order ID: D14E126Q</h6>
+                <article class="card">
+                    <div class="card-body row">
+                        <div class="col"> <strong>Estimated Delivery time:</strong> <br>28 sep 2024 </div>
+                        <div class="col"> <strong>Shipping BY:</strong> <br> ZEEL LOGISTICS, | <i class="fa fa-envelope"></i> logisticszeel@gmail.com </div>
+                        <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
+                        <div class="col"> <strong>Tracking #:</strong> <br> D14E126Q </div>
+                    </div>
+                </article>
+                <div class="track">
+                    <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
+                    <div class="step active "> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
+                    <div class="step "> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
+                    <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Ready for pickup</span> </div>
+                </div>
+                <hr>
+                <ul class="row">
+                    <li class="col-md-4">
+                        <figure class="itemside mb-3">
+                            <div class="aside"><img src="https://i.imgur.com/okEmhhH.jpg" class="img-sm border"></div>
+                            <figcaption class="info align-self-center">
+                                <p class="title">Safe Box <br> Locked</p> <span class="text-muted"> </span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="col-md-4">
+                        <figure class="itemside mb-3">
+                            <div class="aside"><img src="https://i.imgur.com/sS5kfH2.jpg" class="img-sm border"></div>
+                            <figcaption class="info align-self-center">
+                                <p class="title">Boxed <br> 1KG</p> <span class="text-muted"> </span>
+                            </figcaption>
+                        </figure>
+                    </li>
+
+                </ul>
+                <hr>
+				<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Order Details</button>
+				<div id="Demo1" class="w3-container w3-hide">
+                   <h4><b>Consignor</b></h4>
+				   <ul class="b">
+                     <li>Name: Philip Malachovski</li>
+                     <li>Address: Stanfiels Oregon</li>
+                     <li>Phone Number: +1(802)224 8025</li>
+					 <li>Mail:</li>
+                    </ul>
+				   
+				   <h4><b>Consignee</b></h4>
+				   <ul class="b">
+                     <li>Name: Geneya M Mershon</li>
+                     <li>Address: 23483 Broodmoor Drive Parker</li>
+                     <li>Phone Number:720.288.6067</li>
+					 <li>Mail: geneya1501@gmail.com</li>
+					</ul>
+                   
+                </div>
+
+            </div>
+        </article>
+			<a href="#page1" data-transition="flow">Back</a>
+
+	   </div>
+	   
+	   <div data-role="footer" data-position="fixed">
+	       <h4>Zeel Logistcs</h4>`
+	   </div>
+  </div>
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+     } else { 
+       x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>
