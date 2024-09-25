@@ -1,131 +1,545 @@
-<!doctype html>
-<html>
-<head>
-    <title>Shipment Tracking</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="description" content="this website is about logistics"> 
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	
-	<style>
-    body{background-color: #eeeeee;font-family: 'Open Sans',serif}.container{margin-top:50px;margin-bottom: 50px}.card{position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0, 0, 0, 0.1);border-radius: 0.10rem}.card-header:first-child{border-radius: calc(0.37rem - 1px) calc(0.37rem - 1px) 0 0}.card-header{padding: 0.75rem 1.25rem;margin-bottom: 0;background-color: #fff;border-bottom: 1px solid rgba(0, 0, 0, 0.1)}.track{position: relative;background-color: #ddd;height: 7px;display: -webkit-box;display: -ms-flexbox;display: flex;margin-bottom: 60px;margin-top: 50px}.track .step{-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;width: 25%;margin-top: -18px;text-align: center;position: relative}.track .step.active:before{background: #FF5722}.track .step::before{height: 7px;position: absolute;content: "";width: 100%;left: 0;top: 18px}.track .step.active .icon{background: #ee5435;color: #fff}.track .icon{display: inline-block;width: 40px;height: 40px;line-height: 40px;position: relative;border-radius: 100%;background: #ddd}.track .step.active .text{font-weight: 400;color: #000}.track .text{display: block;margin-top: 7px}.itemside{position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;width: 100%}.itemside .aside{position: relative;-ms-flex-negative: 0;flex-shrink: 0}.img-sm{width: 80px;height: 80px;padding: 7px}ul.row, ul.row-sm{list-style: none;padding: 0}.itemside .info{padding-left: 15px;padding-right: 7px}.itemside .title{display: block;margin-bottom: 5px;color: #212529}p{margin-top: 0;margin-bottom: 1rem}.btn-warning{color: #ffffff;background-color: #ee5435;border-color: #ee5435;border-radius: 1px}.btn-warning:hover{color: #ffffff;background-color: #ff2b00;border-color: #ff2b00;border-radius: 1px}
- 
-</style>
-</head>
-<body>
-<!-- Homepage -->
-  <div data-role="page" id="page1">
-	   <div data-role="header">`
-	        <h1>Enter Cargo Number</h1>
-	   </div>
-	   <div data-role="main" class="ui-content">
-	       
-           <ul data-role="listview" data-filter="true" data-filter-placeholder="Enter Your Tracking Number" data-filter-reveal="true">
-		       <li><a href="#page2" data-transition="pop">D14E126Q</a></li>
-
-		   
-		   </ul>		   
-
-	   </div>
-
-	   
-	   <div data-role="footer" data-position="fixed">
-	       <h4>Zeel Logistics</h4>`
-	   </div>
-  </div>
-  
- <!-- D14E126Q page -->
-  <div data-role="page" id="page2">
-	   <div data-role="header">`
-	        <h1> Cargo #D14E126Q</h1>
-	   </div>
-	   <div data-role="main" class="ui-content">
-	                <article class="card">
-            <header class="card-header"> My Orders / Tracking </header>
-            <div class="card-body">
-                <h6>Order ID: D14E126Q</h6>
-                <article class="card">
-                    <div class="card-body row">
-                        <div class="col"> <strong>Estimated Delivery time:</strong> <br>28 sep 2024 </div>
-                        <div class="col"> <strong>Shipping BY:</strong> <br> ZEEL LOGISTICS, | <i class="fa fa-envelope"></i> logisticszeel@gmail.com </div>
-                        <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
-                        <div class="col"> <strong>Tracking #:</strong> <br> D14E126Q </div>
-                    </div>
-                </article>
-                <div class="track">
-                    <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
-                    <div class="step active "> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
-                    <div class="step "> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                    <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Ready for pickup</span> </div>
-                </div>
-                <hr>
-                <ul class="row">
-                    <li class="col-md-4">
-                        <figure class="itemside mb-3">
-                            <div class="aside"><img src="https://i.imgur.com/okEmhhH.jpg" class="img-sm border"></div>
-                            <figcaption class="info align-self-center">
-                                <p class="title">Safe Box <br> Locked</p> <span class="text-muted"> </span>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="col-md-4">
-                        <figure class="itemside mb-3">
-                            <div class="aside"><img src="https://i.imgur.com/sS5kfH2.jpg" class="img-sm border"></div>
-                            <figcaption class="info align-self-center">
-                                <p class="title">Boxed <br> 1KG</p> <span class="text-muted"> </span>
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                </ul>
-                <hr>
-				<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Order Details</button>
-				<div id="Demo1" class="w3-container w3-hide">
-                   <h4><b>Consignor</b></h4>
-				   <ul class="b">
-                     <li>Name: Philip Malachovski</li>
-                     <li>Address: Stanfiels Oregon</li>
-                     <li>Phone Number: +1(802)224 8025</li>
-					 <li>Mail:</li>
-                    </ul>
-				   
-				   <h4><b>Consignee</b></h4>
-				   <ul class="b">
-                     <li>Name: Geneya M Mershon</li>
-                     <li>Address: 23483 Broodmoor Drive Parker</li>
-                     <li>Phone Number:720.288.6067</li>
-					 <li>Mail: geneya1501@gmail.com</li>
-					</ul>
-                   
-                </div>
-
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="On Top of the World, Transport and Logistics, Move your cargo across all modes, Together we create solutions, Excellent transport service and quality, Logistics and Transportation, Contact Us">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="index.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.18.4, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "zeel-logistics",
+		"logo": "images/logo.png"
+}</script>
+    <meta name="theme-color" content="#4345e7">
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-black u-clearfix u-header u-sticky u-sticky-2c96 u-header" id="sec-6f1f"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="629" data-image-height="225">
+          <img src="images/logo.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="./" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Service.html" style="padding: 10px 20px;">Service</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="contact.html" style="padding: 10px 20px;">contact</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Service.html">Service</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="contact.html">contact</a>
+</li></ul>
+              </div>
             </div>
-        </article>
-			<a href="#page1" data-transition="flow">Back</a>
-
-	   </div>
-	   
-	   <div data-role="footer" data-position="fixed">
-	       <h4>Zeel Logistcs</h4>`
-	   </div>
-  </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header> 
+    <section class="u-align-center u-clearfix u-container-align-center u-valign-bottom-xs u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-section-1" id="sec-63bc">
+      <div id="carousel-7386" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width u-slider u-slider-1">
+        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+          <li data-u-target="#carousel-7386" class="u-active u-active-grey-25 u-shape-circle u-white" data-u-slide-to="0" style="width: 10px; height: 10px;"></li>
+        </ol>
+        <div class="u-carousel-inner" role="listbox">
+          <div class="u-active u-align-center u-carousel-item u-container-align-center u-container-style u-image u-shading u-slide u-image-1" data-image-width="1980" data-image-height="901">
+            <div class="u-container-layout u-valign-middle-xl u-container-layout-1">
+              <div class="u-container-style u-group u-shape-rectangle u-group-1" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Up">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <h2 class="u-align-center u-text u-text-body-alt-color u-text-1"> SUPPLY CHAIN SOLUTIONS</h2>
+                  <p class="u-align-center u-text u-text-2"> Specialized,organized and complete supply chain management solutions tailored to fit your needs. From planning and analysis to quality control.&nbsp;<br>
+                  </p>
+                  <a href="https://zeellogistics.github.io/zeel/" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-base u-palette-3-base u-radius u-text-active-black u-text-black u-text-hover-black u-btn-1" target="_blank">TRack shipment </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-12 u-text-body-alt-color u-carousel-control-1" href="#carousel-7386" role="button" data-u-slide="prev">
+          <span aria-hidden="true">
+            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
+          </span>
+          <span class="sr-only">
+            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
+          </span>
+        </a>
+        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-12 u-text-body-alt-color u-carousel-control-2" href="#carousel-7386" role="button" data-u-slide="next">
+          <span aria-hidden="true">
+            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
+          </span>
+          <span class="sr-only">
+            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-75 u-section-2" id="sec-3845">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+          <div class="u-gallery-inner u-gallery-inner-1">
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="626" data-image-height="417">
+                <img class="u-back-image u-expanded" src="images/professional-middle-aged-bearded-trucker-standing-by-his-semi-truck-holding-thumbs-up_342744-1318.jpg" alt="Online Services">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-middle u-over-slide-1">
+                <h4 class="u-gallery-heading" style="width: 245px; margin-right: auto; margin-left: auto;">Online Services</h4>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="626" data-image-height="417">
+                <img class="u-back-image u-expanded" src="images/truck-vehicle-with-trailers-background_342744-1297.jpg" alt="Freight Shipping">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-middle u-over-slide-2">
+                <h4 class="u-gallery-heading" style="width: 245px; margin-right: auto; margin-left: auto;">Freight Shipping</h4>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="626" data-image-height="417">
+                <img class="u-back-image u-expanded u-back-image-3" src="images/agricultural-silo_146671-19117.jpg" alt="Shipment Execution">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-middle u-over-slide-3">
+                <h4 class="u-gallery-heading" style="width: 245px; margin-right: auto; margin-left: auto;">Shipment Execution</h4>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="626" data-image-height="417">
+                <img class="u-back-image u-expanded" src="images/two-colleagues-factory_1303-14331.jpg" alt="Innovations">
+              </div>
+              <div class="u-align-center u-over-slide u-shading u-valign-middle u-over-slide-4">
+                <h4 class="u-gallery-heading" style="width: 245px; margin-right: auto; margin-left: auto;">Innovations</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-align-left u-container-style u-layout-cell u-left-cell u-size-20-lg u-size-20-xl u-size-26-md u-size-26-sm u-size-26-xs u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <h3 class="u-align-left u-text u-text-1">Transport and Logistics Solutions</h3>
+                </div>
+              </div>
+              <div class="u-container-align-left u-container-style u-layout-cell u-right-cell u-size-34-md u-size-34-sm u-size-34-xs u-size-40-lg u-size-40-xl u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <p class="u-align-left u-text u-text-2"> We provide first class logistics services worldwide.Zeel Logistics is a well-established supply chain solution's firm majoring in logistics and consultancy.</p>
+                  <a href="contact.html" class="u-align-left u-btn u-button-style u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Contact-us </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-90 u-valign-middle-md u-valign-middle-sm u-valign-top-lg u-valign-top-xl u-section-3" id="carousel_4a5f">
+      <div class="custom-expanded u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-align-center u-container-align-center u-container-style u-image u-list-item u-repeater-item u-shading u-image-1" data-image-width="626" data-image-height="417" data-animation-name="customAnimationIn" data-animation-duration="1500">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
+              <h4 class="u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">import and export of goods</h4><span class="u-icon u-icon-circle u-icon-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-9819"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-9819" style="enable-background:new 0 0 512 512;"><g><g><path d="M105.054,321.244c-35.365,0-64.138,28.768-64.138,64.138s28.774,64.138,64.138,64.138    c35.364,0,64.138-28.774,64.138-64.138C169.192,350.018,140.418,321.244,105.054,321.244z M105.054,416.351    c-17.074,0-30.963-13.889-30.963-30.963c0-17.074,13.889-30.969,30.963-30.969s30.963,13.895,30.963,30.969    C136.017,402.462,122.128,416.351,105.054,416.351z"></path>
+</g>
+</g><g><g><path d="M391.464,321.244c-35.37,0-64.138,28.768-64.138,64.138s28.774,64.138,64.138,64.138    c35.365,0,64.138-28.774,64.138-64.138C455.603,350.018,426.834,321.244,391.464,321.244z M391.464,416.351    c-17.074,0-30.963-13.889-30.963-30.963c0-17.074,13.889-30.969,30.963-30.969c17.074,0,30.969,13.895,30.969,30.969    C422.433,402.462,408.538,416.351,391.464,416.351z"></path>
+</g>
+</g><g><g><path d="M63.032,144.864c-6.209,0-11.899,3.467-14.746,8.99L1.841,243.98C0.63,246.329,0,248.934,0,251.577v133.806    c0,9.162,7.426,16.587,16.587,16.587H56.95v-33.175H33.175V255.602l39.97-77.563h126.457v-33.175H63.032z"></path>
+</g>
+</g><g><g><rect x="154.263" y="368.795" width="189.097" height="33.175"></rect>
+</g>
+</g><g><g><path d="M495.413,62.479h-295.81c-9.162,0-16.587,7.426-16.587,16.587v306.315h33.175V95.654h262.635v273.14h-39.81v33.175h56.397    c9.162,0,16.587-7.426,16.587-16.587V79.067C512,69.905,504.574,62.479,495.413,62.479z"></path>
+</g>
+</g><g><g><rect x="16.587" y="235.542" width="183.015" height="33.175"></rect>
+</g>
+</g><g><g><path d="M428.742,163.702c-6.088-6.856-16.576-7.47-23.416-1.382l-82.23,73.04l-32.622-33.042    c-6.436-6.519-16.941-6.585-23.455-0.149c-6.519,6.436-6.585,16.941-0.149,23.46l43.675,44.233    c3.235,3.279,7.52,4.938,11.81,4.938c3.926,0,7.857-1.388,11.003-4.186l93.996-83.496    C434.205,181.036,434.824,170.552,428.742,163.702z"></path>
+</g>
+</g></svg></span>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-2" data-image-width="626" data-image-height="417" data-animation-name="customAnimationIn" data-animation-duration="1500">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
+              <h4 class="u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">clearance and forwarding</h4><span class="u-icon u-icon-circle u-icon-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-4922"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-4922" style="enable-background:new 0 0 512 512;"><g><g><path d="M386.689,304.403c-35.587,0-64.538,28.951-64.538,64.538s28.951,64.538,64.538,64.538    c35.593,0,64.538-28.951,64.538-64.538S422.276,304.403,386.689,304.403z M386.689,401.21c-17.796,0-32.269-14.473-32.269-32.269    c0-17.796,14.473-32.269,32.269-32.269c17.796,0,32.269,14.473,32.269,32.269C418.958,386.738,404.485,401.21,386.689,401.21z"></path>
+</g>
+</g><g><g><path d="M166.185,304.403c-35.587,0-64.538,28.951-64.538,64.538s28.951,64.538,64.538,64.538s64.538-28.951,64.538-64.538    S201.772,304.403,166.185,304.403z M166.185,401.21c-17.796,0-32.269-14.473-32.269-32.269c0-17.796,14.473-32.269,32.269-32.269    c17.791,0,32.269,14.473,32.269,32.269C198.454,386.738,183.981,401.21,166.185,401.21z"></path>
+</g>
+</g><g><g><path d="M430.15,119.675c-2.743-5.448-8.32-8.885-14.419-8.885h-84.975v32.269h75.025l43.934,87.384l28.838-14.5L430.15,119.675z"></path>
+</g>
+</g><g><g><rect x="216.202" y="353.345" width="122.084" height="32.269"></rect>
+</g>
+</g><g><g><path d="M117.781,353.345H61.849c-8.912,0-16.134,7.223-16.134,16.134c0,8.912,7.223,16.134,16.134,16.134h55.933    c8.912,0,16.134-7.223,16.134-16.134C133.916,360.567,126.693,353.345,117.781,353.345z"></path>
+</g>
+</g><g><g><path d="M508.612,254.709l-31.736-40.874c-3.049-3.937-7.755-6.239-12.741-6.239H346.891V94.655    c0-8.912-7.223-16.134-16.134-16.134H61.849c-8.912,0-16.134,7.223-16.134,16.134s7.223,16.134,16.134,16.134h252.773v112.941    c0,8.912,7.223,16.134,16.134,16.134h125.478l23.497,30.268v83.211h-44.639c-8.912,0-16.134,7.223-16.134,16.134    c0,8.912,7.223,16.134,16.134,16.134h60.773c8.912,0,16.134-7.223,16.135-16.134V264.605    C512,261.023,510.806,257.538,508.612,254.709z"></path>
+</g>
+</g><g><g><path d="M116.706,271.597H42.487c-8.912,0-16.134,7.223-16.134,16.134c0,8.912,7.223,16.134,16.134,16.134h74.218    c8.912,0,16.134-7.223,16.134-16.134C132.84,278.82,125.617,271.597,116.706,271.597z"></path>
+</g>
+</g><g><g><path d="M153.815,208.134H16.134C7.223,208.134,0,215.357,0,224.269s7.223,16.134,16.134,16.134h137.681    c8.912,0,16.134-7.223,16.134-16.134S162.727,208.134,153.815,208.134z"></path>
+</g>
+</g><g><g><path d="M180.168,144.672H42.487c-8.912,0-16.134,7.223-16.134,16.134c0,8.912,7.223,16.134,16.134,16.134h137.681    c8.912,0,16.134-7.223,16.134-16.134C196.303,151.895,189.08,144.672,180.168,144.672z"></path>
+</g>
+</g></svg></span>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-3" data-image-width="1200" data-image-height="801" data-animation-name="customAnimationIn" data-animation-duration="1500">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
+              <h4 class="u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">road trucking</h4><span class="u-icon u-icon-circle u-icon-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 510 510" style=""><use xlink:href="#svg-f27c"></use></svg><svg class="u-svg-content" viewBox="0 0 510 510" id="svg-f27c"><g><path d="m465 435v-284h-30v149h-30v-15c0-33.084-26.916-60-60-60h-30v-104c0-58.448-47.551-106-106-106h-149v150h-60v256h45.025c.54 40.895 33.955 74 74.975 74s74.435-33.105 74.975-74h31.451c7.571 42.02 44.408 74 88.575 74 49.292 0 89.448-39.834 89.987-89h.012v-16h30v75h75v-30zm-375-390h119c41.907 0 76 34.094 76 76v88.465l-41.205-33.514 9.622-19.243-26.833-13.416-20.378 40.757 50.349 40.951h-70.342l-60-60h-36.213zm30 420c-24.813 0-45-20.186-45-45s20.187-45 45-45 45 20.186 45 45-20.187 45-45 45zm106.091-74h-36.929c-11.362-26.996-38.083-46-69.162-46s-57.8 19.004-69.162 46h-20.838v-76h90v-30h-90v-30h60v-30h-60v-30h83.787l60 60h171.213c16.542 0 30 13.458 30 30v52.98c-15.935-14.281-36.969-22.98-60-22.98-44.865 0-82.164 33-88.909 76zm88.909 74c-33.084 0-60-26.916-60-60s26.916-60 60-60 60 26.916 60 60-26.916 60-60 60zm90-105v-30h30v30z"></path><path d="m300 390h30v30h-30z"></path>
+</g></svg></span>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-4" data-image-width="626" data-image-height="417" data-animation-name="customAnimationIn" data-animation-duration="1500">
+            <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4">
+              <h4 class="u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">warehouse service</h4><span class="u-icon u-icon-circle u-icon-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-0e58"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-0e58"><g><path d="m327.766 312.218 80.333-46.377c7.175-4.142 9.633-13.315 5.491-20.49-4.142-7.174-13.315-9.635-20.49-5.49l-80.333 46.377c-7.175 4.142-9.633 13.315-5.491 20.49 3.486 6.038 12.24 10.255 20.49 5.49z"></path><path d="m472.214 122.51-208.714-120.5c-4.642-2.68-10.359-2.68-15 0l-208.714 120.5c-4.641 2.68-7.5 7.631-7.5 12.99v241c0 5.359 2.859 10.311 7.5 12.99l208.714 120.5c2.32 1.34 4.91 2.01 7.5 2.01s5.18-.67 7.5-2.01l208.714-120.5c4.641-2.68 7.5-7.631 7.5-12.99v-241c0-5.359-2.859-10.311-7.5-12.99zm-106.996-27.136-178.715 103.18-39.569-22.847 178.714-103.18zm-193.715 129.16v45.562l-39.625-22.88.037-45.539zm84.497-192.214 39.645 22.889-178.714 103.18-39.645-22.889zm-15 438.7-178.714-103.18v-206.36l39.643 22.887-.057 71.492c-.004 5.362 2.855 10.32 7.5 13.002l69.632 40.207c7.811 4.509 14.855.084 15 0 4.642-2.679 7.5-7.631 7.5-12.99v-54.221l39.496 22.803zm15-232.34-39.499-22.804 178.714-103.18 39.498 22.804zm193.714 129.16-178.714 103.18v-206.36l178.714-103.18z"></path><path d="m393.101 320.193-80.333 46.377c-7.174 4.142-9.633 13.315-5.491 20.489 3.524 6.104 12.295 10.224 20.49 5.491l80.333-46.375c7.174-4.143 9.633-13.316 5.491-20.49s-13.314-9.632-20.49-5.492z"></path>
+</g></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-align-left u-container-align-left u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+        <div class="u-container-layout u-valign-middle u-container-layout-5">
+          <h6 class="u-align-left u-custom-font u-text u-text-5"> Services</h6>
+          <h2 class="u-align-left u-text u-text-6">Move your cargo across all modes</h2>
+          <p class="u-align-left u-custom-font u-font-ubuntu u-text u-text-7"> We have wide network of offices in all major locations to help you with the services we offer</p>
+          <a href="Service.html" class="u-active-palette-3-base u-align-left u-border-none u-btn u-button-style u-hover-palette-3-base u-white u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">more </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-4" id="sec-843a">
+      <div class="u-expanded-width u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+      <img class="u-image u-image-1" src="images/photo-1651525670033-279c26cc2347.jpeg" data-image-width="425" data-image-height="283">
+      <div class="u-align-center u-container-align-center u-container-style u-group u-white u-group-1">
+        <div class="u-container-layout u-valign-middle u-container-layout-1">
+          <h2 class="u-align-center u-text u-text-default u-text-1">Efficient Supply Chain Management</h2>
+          <p class="u-align-center u-text u-text-default u-text-grey-50 u-text-2"> We provide complete supply chain management solutions tailored to fit your needs. From planning and analysis to quality control.</p>
+          <p class="u-align-center u-text u-text-default u-text-grey-50 u-text-3"></p>
+          <a href="Service.html" class="u-active-palette-3-base u-align-left u-border-2 u-border-active-palette-3-base u-border-grey-50 u-border-hover-palette-3-base u-btn u-button-style u-hover-palette-3-base u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-1">service </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-black u-clearfix u-container-align-center u-section-5" id="sec-2c7c">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-29 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h2 class="u-align-left u-text u-text-1">Transportation</h2>
+                  <p class="u-align-left u-custom-font u-font-montserrat u-text u-text-2">zeel involves the efficient coordination and movement of goods from point of origin to point of consumption, ensuring timely delivery and cost-effective operations.</p>
+                  <p class="u-align-left u-text u-text-3"></p>
+                  <a href="https://zeellogistics.github.io/zeel/" class="u-active-palette-3-base u-align-left u-border-2 u-border-active-palette-3-base u-border-hover-palette-3-base u-border-palette-3-base u-btn u-button-style u-hover-palette-3-base u-none u-text-active-white u-text-hover-white u-text-white u-btn-1" target="_blank">track cargo</a>
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-size-31 u-image-1" data-image-width="425" data-image-height="283">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-left u-container-align-left u-container-style u-list-item u-palette-3-base u-repeater-item u-shape-rectangle u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-4">01</h2>
+                <h5 class="u-custom-font u-font-montserrat u-text u-text-5">Transportation</h5>
+                <p class="u-text u-text-6">Logistics involves the efficient coordination and movement of goods from point of origin to point of consumption, ensuring timely delivery and cost-effective operations.</p>
+              </div>
+            </div>
+            <div class="u-align-left u-container-align-left u-container-style u-list-item u-palette-3-base u-repeater-item u-shape-rectangle u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-7">02</h2>
+                <h5 class="u-custom-font u-font-montserrat u-text u-text-8">Inventory Management</h5>
+                <p class="u-text u-text-9">Effective logistics management is crucial for businesses to optimize their supply chain, minimize inventory costs, and enhance customer satisfaction through on-time deliveries.</p>
+              </div>
+            </div>
+            <div class="u-align-left u-container-align-left u-container-style u-list-item u-palette-3-base u-repeater-item u-shape-rectangle u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-10">03</h2>
+                <h5 class="u-custom-font u-font-montserrat u-text u-text-11">Warehouse Operations</h5>
+                <p class="u-text u-text-12">Utilizing advanced technology and strategic planning, logistics plays a vital role in streamlining operations, maximizing efficiency, and meeting the complex demands of modern businesses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-60 u-valign-middle-sm u-valign-middle-xs u-section-6" id="sec-9938">
+      <div class="u-expanded-width u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+      <div class="data-layout-selected u-clearfix u-gutter-50 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-30 u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
+                  <div class="u-container-layout u-valign-middle u-container-layout-1">
+                    <h2 class="u-text u-text-1">Enhancing Last-Mile Delivery Operations</h2>
+                  </div>
+                </div>
+                <div class="u-container-style u-image u-layout-cell u-left-cell u-size-40 u-image-1" data-image-width="425" data-image-height="319">
+                  <div class="u-container-layout u-container-layout-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-30 u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-container-style u-image u-layout-cell u-right-cell u-size-40 u-image-2" data-image-width="425" data-image-height="283">
+                  <div class="u-container-layout u-container-layout-3"></div>
+                </div>
+                <div class="u-container-style u-hidden-md u-hidden-sm u-hidden-xs u-layout-cell u-right-cell u-size-20 u-layout-cell-4">
+                  <div class="u-container-layout u-container-layout-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-container-style u-group u-group-1">
+        <div class="u-container-layout u-container-layout-5">
+          <h3 class="u-align-left u-text u-text-2">Managing Freight Transportation Effectively</h3>
+          <p class="u-align-left u-text u-text-default u-text-3"> We undertake actual clearance at the border points, land and air and ensure that regulations are followed and correct tariffs are subjected to the goods.</p>
+          <p class="u-align-left u-text u-text-4"></p>
+          <a href="blog/road-trucking.html" class="u-active-palette-3-base u-align-left u-border-2 u-border-active-palette-3-base u-border-grey-50 u-border-hover-palette-3-base u-btn u-button-style u-hover-palette-3-base u-none u-text-active-black u-text-body-color u-text-hover-black u-btn-1">Road trucking </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-grey-70 u-valign-bottom u-section-7" id="sec-2543">
+      <h2 class="u-align-center u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Excellent transport service and quality</h2>
+      <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> Zeel Logistics is a well-established supply chain solution's firm majoring in logistics and consultancy.</p>
+      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-col">
+            <div class="u-size-40">
+              <div class="u-layout-row">
+                <div class="u-size-40">
+                  <div class="u-layout-col">
+                    <div class="u-align-left u-container-align-left u-container-align-left-md u-container-align-left-sm u-container-align-left-xs u-container-style u-image u-layout-cell u-shading u-size-60 u-image-1" data-image-width="847" data-image-height="356" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                      <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                        <div class="u-align-left-md u-align-left-sm u-align-left-xs u-border-3 u-border-white u-line u-line-horizontal u-line-1"></div>
+                        <h6 class="u-align-left-md u-align-left-sm u-align-left-xs u-text u-text-3"><b>AIR FREIGHT SERVICE</b>
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-20">
+                  <div class="u-layout-col">
+                    <div class="u-black u-container-style u-layout-cell u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                      <div class="u-container-layout u-container-layout-2">
+                        <h3 class="u-text u-text-4">Best Transportation and delivery services </h3>
+                        <a href="Service.html" class="u-active-white u-align-left u-border-none u-btn u-button-style u-hover-white u-palette-3-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Services </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-20">
+              <div class="u-layout-row">
+                <div class="u-container-style u-image u-layout-cell u-size-20 u-image-2" data-image-width="1760" data-image-height="740" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                  <div class="u-container-layout"></div>
+                </div>
+                <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-20 u-white u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                  <div class="u-container-layout u-container-layout-4"><span class="u-align-left u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-bce3"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-bce3" style="enable-background:new 0 0 512 512;"><g><g><path d="M150.24,375.99l-64-27.2c-8.064-3.456-17.504,0.352-20.96,8.48s0.32,17.536,8.48,20.96l64,27.2    c2.016,0.864,4.16,1.28,6.24,1.28c6.208,0,12.128-3.648,14.72-9.76C162.176,388.822,158.4,379.414,150.24,375.99z"></path>
+</g>
+</g><g><g><path d="M511.776,111.254c-0.096-1.632-0.192-3.264-0.8-4.896c-0.352-0.928-0.992-1.568-1.504-2.4    c-0.352-0.576-0.608-1.088-0.992-1.6c-1.792-2.336-4-4.128-6.656-5.152c-0.096-0.032-0.128-0.128-0.224-0.16l-256-95.968    c-3.872-1.504-8.128-1.408-11.904,0.224l-224,95.968c-0.224,0.096-0.32,0.352-0.544,0.448c-2.208,1.056-4.064,2.688-5.6,4.704    c-0.448,0.576-0.832,1.088-1.216,1.728c-0.32,0.544-0.8,0.928-1.056,1.536c-0.864,2.048-1.28,4.16-1.28,6.272v0.032v288    c0,6.4,3.808,12.192,9.696,14.72l224,96h0.032c1.952,0.832,4.064,1.28,6.272,1.28c1.92,0,3.808-0.352,5.632-1.024l0.576-0.224    c0,0,0,0,0.032,0l255.392-95.776c6.24-2.336,10.368-8.32,10.368-14.976v-288C512,111.702,511.776,111.51,511.776,111.254z     M224,471.702L32,389.43V136.277l192,82.272V471.702z M240.384,190.742L56.64,111.99l183.744-78.72l210.048,78.72l-50.08,18.784    L310.56,90.55c-4.544-2.048-9.728-1.824-14.048,0.544L233.76,117.75c-5.92,2.496-9.76,8.384-9.76,14.816    c0,6.464,3.904,12.32,9.92,14.784l58.208,24.032L240.384,190.742z M352,183.062l32-12v77.984l-32,12V183.062z M336.064,154.87    l-54.72-22.56L304,122.678l53.76,24.064L336.064,154.87z M480,388.886l-224,84V219.062l64-24v89.088    c0,5.248,2.592,10.144,6.88,13.152c2.72,1.888,5.888,2.848,9.12,2.848c1.888,0,3.808-0.352,5.632-1.024l64-24    c6.24-2.368,10.368-8.32,10.368-14.976V159.062l64-24V388.886z"></path>
+</g>
+</g></svg></span>
+                    <p class="u-align-left u-large-text u-text u-text-variant u-text-5">Our platform integrates predictable, flat-rate shipping so you can offer&nbsp;customers free shipping — and still make a profit.</p>
+                  </div>
+                </div>
+                <div class="u-container-style u-image u-layout-cell u-size-20 u-image-3" data-image-width="626" data-image-height="417" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
+                  <div class="u-container-layout u-container-layout-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-container-align-right-lg u-container-align-right-xl u-image u-section-8" id="sec-4497" data-image-width="1980" data-image-height="1110">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-container-align-center u-container-style u-group u-white u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="custom-expanded u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-white u-list-item-1" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500">
+                  <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-3-base u-icon-1"><img src="images/154178-8f2b67b2.png" alt=""></span>
+                    <h3 class="u-align-center u-text u-text-palette-3-base u-text-1" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">&gt;500k</h3>
+                    <h4 class="u-align-center u-text u-text-2"> Employees</h4>
+                  </div>
+                </div>
+                <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-white u-list-item-2" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500">
+                  <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-3-base u-icon-2"><img src="images/660154-91f85e59.png" alt=""></span>
+                    <h3 class="u-align-center u-text u-text-palette-3-base u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"> 200+</h3>
+                    <h5 class="u-align-center u-text u-text-4"> Countries &amp; territories served</h5>
+                  </div>
+                </div>
+                <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-white u-list-item-3" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                  <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4"><span class="u-file-icon u-icon u-text-palette-3-base u-icon-3"><img src="images/565391-b083d359.png" alt=""></span>
+                    <h3 class="u-align-center u-text u-text-palette-3-base u-text-5" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">34.M</h3>
+                    <h4 class="u-align-center u-text u-text-6"> Packages delivered daily</h4>
+                  </div>
+                </div>
+                <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-shape-rectangle u-white u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                  <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5"><span class="u-file-icon u-icon u-text-palette-3-base u-icon-4"><img src="images/9721531-020f1384.png" alt=""></span>
+                    <h3 class="u-align-center u-text u-text-palette-3-base u-text-7" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">$31.5</h3>
+                    <h4 class="u-align-center u-text u-text-8"> Total revenue from 2020</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-9" id="carousel_3311" data-image-width="1980" data-image-height="1114">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-default u-text-palette-3-base u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Contact Us</h2>
+        <div class="u-align-center u-border-5 u-border-palette-3-base u-line u-line-horizontal u-line-1" data-animation-name="customAnimationIn" data-animation-duration="1500"></div>
+        <p class="u-align-center u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"> We are here to answer any questions you may have about our experiences. Reach out to us and we'll respond as soon as we can.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-align-center u-icon u-icon-circle u-palette-3-base u-spacing-20 u-text-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-36d8"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-36d8" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z"></path>
+</g>
+</g><g><g><path d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z"></path>
+</g>
+</g></svg></span>
+                <h5 class="u-align-center u-text u-text-body-color u-text-default u-text-3">Address:</h5>
+                <p class="u-align-center u-text u-text-4"> 4012 Greenbrier Dr, Jefferson City, MO 65109, USA</p>
+              </div>
+            </div>
+            <div class="u-container-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-icon-circle u-palette-3-base u-spacing-20 u-text-white u-icon-2"><img src="images/561127-a5e550d6.png" alt=""></span>
+                <h5 class="u-align-center u-text u-text-body-color u-text-default u-text-5"> Email:</h5>
+                <p class="u-align-center u-text u-text-6">
+                  <a href="mailto:hello@company.com" class="u-border-active-none u-border-hover-none u-btn u-button-link u-button-style u-none u-text-hover-palette-3-base u-text-palette-5-dark-3 u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></a>logisticszeel@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-clearfix u-footer u-grey-80 u-footer" id="sec-bc5f"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-lg u-align-left-md u-align-left-sm u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top-sm u-container-layout-1">
+                  <a href="#" class="u-align-center u-image u-logo u-image-1" data-image-width="629" data-image-height="225">
+                    <img src="images/logo.png" class="u-logo-image u-logo-image-1">
+                  </a>
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-15 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2"><!--position-->
+                  <div data-position="" class="u-position u-position-1"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content--><!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content--> WHAT WE&nbsp;OFFER<a href="blog/clearance.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">
+                            <br>Clearance &amp; Forwarding
+                          </a>
+                          <br>
+                          <br>
+                          <a href="blog/road-trucking.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Road Transportation</a>
+                          <br>
+                          <br>
+                          <a href="blog/air-freight.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3">Air Freight</a>
+                          <br>
+                          <br>
+                          <a href="blog/goods.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4">Import &amp; Exports of Goods</a>
+                          <br>
+                          <br>
+                          <a href="blog/warehousing.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5">warehousingSupply Chain</a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-15 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3"><!--position-->
+                  <div data-position="" class="u-position u-position-2"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content-->main Link<br><!--/block_header_content-->
+                        </h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <a href="./" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6">home</a>
+                          <br>
+                          <br>
+                          <a href="Service.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7">our service</a>
+                          <br>
+                          <br>
+                          <a href="About.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8">About Us</a>
+                          <br>
+                          <br>
+                          <a href="contact.html" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9">Contact</a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position--><!--position-->
+                  <div data-position="" class="u-position u-position-3"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content-->Contact info<br><!--/block_header_content-->
+                        </h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <span style="font-size: 1.125rem;"> Everyday is a new day for us and we work really hard to satisfy our customers everywhere.</span>
+                          <br>
+                          <br><i></i>Zeel Logistics Ltd<br>4012 Greenbrier Dr, Jefferson City, MO 65109<i></i>
+                          <br>
+                          <br>logisticszeel@gmail.com<i></i>
+                          <br>
+                          <br>Mon - Sat 8.00 - 17.00<br>
+                          <a id="to-top" href="#this-is-top" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10"><i></i>
+                          </a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-right-cell u-size-15 u-layout-cell-4">
+                <div class="u-container-layout u-container-layout-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-align-center u-text u-text-7"> 2024 Zeel Logistics All rights reserved.</p>
+      </div></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
   
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-    function myFunction(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-     } else { 
-       x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-</body>
-</html>
+</body></html>
